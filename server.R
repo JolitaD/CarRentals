@@ -1,20 +1,8 @@
 library(ggvis)
 library(dplyr)
 library(foreign)
-library(readr)
-library(dplyr)
-library(lubridate)
 
-
-delpaso_files_stats_notime <- read_csv("delpaso_files_stats_notime.csv")
-delpaso_files_stats_notime <- dplyr::mutate(delpaso_files_stats_notime, Terminas=Date_To-Date_From)
-delpaso_files_stats_notime <- dplyr::mutate(delpaso_files_stats_notime, Liko_dienu=Date_From-Date)
-delpaso_files_stats_notime <- dplyr::mutate(delpaso_files_stats_notime, Menuo=month(Date_From))
-delpaso_files_stats_notime <- dplyr::mutate(delpaso_files_stats_notime, Liko_dienu_po50=round(((Date_From-Date)+50)/50))
-delpaso_files_stats_notime <- dplyr::mutate(delpaso_files_stats_notime, id = rownames(delpaso_files_stats_notime))
-View(delpaso_files_stats_notime)
-
-#all_cars <- read.spss("Automobiliunuoma4.sav", to.data.frame=TRUE)
+all_cars <- read.spss("Automobiliunuoma4.sav", to.data.frame=TRUE)
 #View(all_cars)
 
 function(input, output, session) {
