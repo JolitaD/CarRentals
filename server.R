@@ -1,6 +1,6 @@
 library(ggvis)
 library(dplyr)
-library(foreign)
+#library(foreign) Šios bibliotekos nereikia - ji reikalinga tik SPSS failų nuskaitymui
 library(readr)
 library(dplyr)
 library(lubridate)
